@@ -33,6 +33,14 @@ a:hover {
 .size-22{
   font-size: 22px;
 }
+.container h1{
+  text-align: center;
+}
+
+.main-div{
+  display: flex;
+  align-content: space-between;
+}
 .section{
   position: relative;
   width: 100%;
@@ -47,6 +55,8 @@ a:hover {
   position: absolute;
   left: -9999px;
 }
+
+/*Pricing btn start*/
 .pricing:checked + label,
 .pricing:not(:checked) + label{
   position: relative;
@@ -69,6 +79,7 @@ a:hover {
   overflow: hidden;
   color: #fff;
   text-align: left;
+  user-select: none;
 }
 .pricing:checked + label:before,
 .pricing:not(:checked) + label:before{
@@ -99,10 +110,126 @@ a:hover {
 .pricing:checked + label:after {
   left: 130px;
 }
+/* pricing 1*/
+.pricing-1:checked + label,
+.pricing-1:not(:checked) + label{
+  position: relative;
+  display: block;
+  text-align: center;
+  width: 260px;
+  height: 44px;
+  border-radius: 4px;
+  padding: 0;
+  margin: 0 auto;
+  cursor: pointer;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 14px;
+  letter-spacing: 1px;
+  line-height: 44px;
+  padding: 0 25px;
+  padding-right: 27px;
+  overflow: hidden;
+  color: #fff;
+  text-align: left;
+  user-select: none;
+}
+.pricing-1:checked + label:before,
+.pricing-1:not(:checked) + label:before{
+  position: absolute;
+  content: '';
+  z-index: -2;
+  background-color: #e4e4e4;
+  width: 100%;
+  height: 100%;
+  display: block;
+  top: 0;
+  left: 0;
+}
+.pricing-1:checked + label:after,
+.pricing-1:not(:checked) + label:after{
+  position: absolute;
+  content: '';
+  z-index: -1;
+  background-color: #1c1e29;
+  width: 128px;
+  height: 40px;
+  display: block;
+  top: 2px;
+  left: 2px;
+  border-radius: 2px;
+  transition: left 300ms linear;
+}
+.pricing-1:checked + label:after {
+  left: 130px;
+}
+
+/*pricing 2*/
+
+.pricing-2:checked + label,
+.pricing-2:not(:checked) + label{
+  position: relative;
+  display: block;
+  text-align: center;
+  width: 260px;
+  height: 44px;
+  border-radius: 4px;
+  padding: 0;
+  margin: 0 auto;
+  cursor: pointer;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 14px;
+  letter-spacing: 1px;
+  line-height: 44px;
+  padding: 0 25px;
+  padding-right: 27px;
+  overflow: hidden;
+  color: #fff;
+  text-align: left;
+  user-select: none;
+}
+.pricing-2:checked + label:before,
+.pricing-2:not(:checked) + label:before{
+  position: absolute;
+  content: '';
+  z-index: -2;
+  background-color: #e4e4e4;
+  width: 100%;
+  height: 100%;
+  display: block;
+  top: 0;
+  left: 0;
+}
+.pricing-2:checked + label:after,
+.pricing-2:not(:checked) + label:after{
+  position: absolute;
+  content: '';
+  z-index: -1;
+  background-color: #1c1e29;
+  width: 128px;
+  height: 40px;
+  display: block;
+  top: 2px;
+  left: 2px;
+  border-radius: 2px;
+  transition: left 300ms linear;
+}
+.pricing-2:checked + label:after {
+  left: 130px;
+}
+
+/*End Of Pricing button*/
+
+
 .block-diff {
   display: block;
   mix-blend-mode: difference;
 }
+
+/*Card Start here*/
 
 .card-3d-wrap {
   position: relative;
@@ -113,7 +240,9 @@ a:hover {
   transform-style: preserve-3d;
   perspective: 1000px;
   margin-top: 90px;
+  transition: transform 0.3s; 
 }
+
 .card-3d-wrapper {
   width: 100%;
   height: 100%;
@@ -123,7 +252,59 @@ a:hover {
   -webkit-transform-style: preserve-3d;
   transform-style: preserve-3d;
   transition: transform 700ms 400ms ease-out; 
+  box-shadow: 0 12px 35px 0 rgba(16, 39, 112, 0.07);
 }
+.card-3d-wrap:hover{
+  transform:  scale(1.1);
+}
+/*Second Card*/
+
+.card-3d-wrap-1 {
+  position: relative;
+  width: 340px;
+  max-width: calc(100% - 20px);
+  height: 510px;
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  perspective: 1000px;
+  margin-top: 90px;
+}
+.card-3d-wrapper-1 {
+  width: 100%;
+  height: 100%;
+  position:absolute;    
+  top: 0;
+  left: 0;  
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  transition: transform 700ms 400ms ease-out; 
+}
+
+/*Third card*/
+
+.card-3d-wrap-2 {
+  position: relative;
+  width: 340px;
+  max-width: calc(100% - 20px);
+  height: 510px;
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  perspective: 1000px;
+  margin-top: 90px;
+}
+.card-3d-wrapper-2 {
+  width: 100%;
+  height: 100%;
+  position:absolute;    
+  top: 0;
+  left: 0;  
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  transition: transform 700ms 400ms ease-out; 
+}
+
+/*End Card*/
+
 .card-front, .card-back {
   width: 100%;
   height: 100%;
@@ -147,9 +328,19 @@ a:hover {
   transform: rotateY(180deg);
   transition: transform 700ms 400ms ease-out; 
 }
+
+.pricing-1:checked ~ .card-3d-wrap-1 .card-3d-wrapper-1 {
+  transform: rotateY(180deg);
+  transition: transform 700ms 400ms ease-out; 
+}
+
+.pricing-2:checked ~ .card-3d-wrap-2 .card-3d-wrapper-2 {
+  transform: rotateY(180deg);
+  transition: transform 700ms 400ms ease-out; 
+}
 .pricing-wrap{
   position: relative;
-  padding-top: 160px;
+  padding-top: 16px;
   width: 100%;
   display: block;
   z-index: 1;
@@ -173,20 +364,7 @@ a:hover {
   color: #102770;
   transform: translate3d(0, 0, 35px) perspective(100px);
 }
-.pricing-wrap h4:before{
-  position: absolute;
-  content: '';
-  z-index: -1;
-  background: linear-gradient(217deg, #448ad5, #b8eaf9);
-  width: 70px;
-  height: 70px;
-  display: block;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  box-shadow: 0 6px 20px 0 rgba(16, 39, 112,.3);
-  animation: border-transform 6s linear infinite;
-}
+
 .card-back .pricing-wrap h4:before{
   background: linear-gradient(217deg, #648946, #a3c984);
 }
@@ -282,6 +460,20 @@ a:hover {
   pointer-events: none;
   transition: transform 400ms ease, opacity 200ms 150ms ease;
 }
+
+.pricing-1:checked ~ .card-3d-wrap-1 .card-3d-wrapper-1 .img-1 {
+  opacity: 0;
+  transform: translate3d(-50px, 25px, 45px) perspective(100px);
+  pointer-events: none;
+  transition: transform 400ms ease, opacity 200ms 150ms ease;
+}
+
+.pricing-2:checked ~ .card-3d-wrap-2 .card-3d-wrapper-2 .img-1 {
+  opacity: 0;
+  transform: translate3d(-50px, 25px, 45px) perspective(100px);
+  pointer-events: none;
+  transition: transform 400ms ease, opacity 200ms 150ms ease;
+}
 .img-2 {
   position: absolute;
   display: block;
@@ -293,6 +485,7 @@ a:hover {
   overflow: hidden;
   width: 100%;
   transform: translate3d(0, 0, 15px) perspective(100px);
+  
 }
 .img-3{
   position: absolute;
@@ -312,6 +505,20 @@ a:hover {
   pointer-events: none;
   transition: transform 400ms ease, opacity 200ms 150ms ease;
 }
+
+.pricing-1:checked ~ .card-3d-wrap-1 .card-3d-wrapper-1 .img-3 {
+  opacity: 0;
+  transform: translate3d(-50px, 5px, 55px) perspective(100px) scale(0.4);
+  pointer-events: none;
+  transition: transform 400ms ease, opacity 200ms 150ms ease;
+}
+
+.pricing-2:checked ~ .card-3d-wrap-2 .card-3d-wrapper-2 .img-3 {
+  opacity: 0;
+  transform: translate3d(-50px, 5px, 55px) perspective(100px) scale(0.4);
+  pointer-events: none;
+  transition: transform 400ms ease, opacity 200ms 150ms ease;
+}
 .img-6{
   position: absolute;
   display: block;
@@ -325,6 +532,18 @@ a:hover {
   transition: transform 300ms 1300ms ease, opacity 200ms 1300ms ease;
 }
 .pricing:checked ~ .card-3d-wrap .card-3d-wrapper .img-6 {
+  opacity: 0;
+  transform: translate3d(0, 0, 25px) perspective(100px) scale(0.4);
+  pointer-events: none;
+  transition: transform 400ms ease, opacity 200ms 150ms ease;
+}
+.pricing-1:checked ~ .card-3d-wrap-1 .card-3d-wrapper-2 .img-6 {
+  opacity: 0;
+  transform: translate3d(0, 0, 25px) perspective(100px) scale(0.4);
+  pointer-events: none;
+  transition: transform 400ms ease, opacity 200ms 150ms ease;
+}
+.pricing:checked-2 ~ .card-3d-wrap-2 .card-3d-wrapper-2 .img-6 {
   opacity: 0;
   transform: translate3d(0, 0, 25px) perspective(100px) scale(0.4);
   pointer-events: none;
@@ -349,6 +568,18 @@ a:hover {
   transform: translate3d(0, 0, 45px) perspective(100px) scale(1);
   transition: transform 400ms 1200ms ease, opacity 300ms 1200ms ease;
 }
+.pricing-1:checked ~ .card-3d-wrap-1 .card-3d-wrapper-1 .img-4 {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translate3d(0, 0, 45px) perspective(100px) scale(1);
+  transition: transform 400ms 1200ms ease, opacity 300ms 1200ms ease;
+}
+.pricing-2:checked ~ .card-3d-wrap-2 .card-3d-wrapper-2 .img-4 {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translate3d(0, 0, 45px) perspective(100px) scale(1);
+  transition: transform 400ms 1200ms ease, opacity 300ms 1200ms ease;
+}
 .img-5{
   position: absolute;
   display: block;
@@ -362,6 +593,18 @@ a:hover {
   transition: transform 400ms 100ms ease, opacity 200ms 250ms ease;
 }
 .pricing:checked ~ .card-3d-wrap .card-3d-wrapper .img-5 {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translate3d(0, 0, 35px) perspective(100px) scale(1) rotate(10deg);
+  transition: transform 400ms 1300ms ease, opacity 300ms 1300ms ease;
+}
+.pricing-1:checked ~ .card-3d-wrap-1 .card-3d-wrapper-1 .img-5 {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translate3d(0, 0, 35px) perspective(100px) scale(1) rotate(10deg);
+  transition: transform 400ms 1300ms ease, opacity 300ms 1300ms ease;
+}
+.pricing-2:checked ~ .card-3d-wrap-2 .card-3d-wrapper-2 .img-5 {
   opacity: 1;
   pointer-events: auto;
   transform: translate3d(0, 0, 35px) perspective(100px) scale(1) rotate(10deg);
@@ -385,6 +628,18 @@ a:hover {
   transform: translate3d(0, 0, 35px) perspective(100px) scale(1);
   transition: transform 400ms 1300ms ease, opacity 300ms 1300ms ease;
 }
+.pricing-1:checked ~ .card-3d-wrap-1 .card-3d-wrapper-1 .img-7 {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translate3d(0, 0, 35px) perspective(100px) scale(1);
+  transition: transform 400ms 1300ms ease, opacity 300ms 1300ms ease;
+}
+.pricing-2:checked ~ .card-3d-wrap-2 .card-3d-wrapper-2 .img-7 {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translate3d(0, 0, 35px) perspective(100px) scale(1);
+  transition: transform 400ms 1300ms ease, opacity 300ms 1300ms ease;
+}
 
 
 
@@ -400,4 +655,11 @@ a:hover {
 	height: 26px;
 	width: auto;
 	display: block;
+}
+
+.pb-5, .py-5 {
+  padding-bottom: 3rem!important;
+}
+.pt-5, .py-5 {
+  padding-top: 0rem!important;
 }
