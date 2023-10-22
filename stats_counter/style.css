@@ -1,0 +1,97 @@
+:root {
+    --color1: #ffffff;
+    --color2: #c8c8c8;
+ 
+
+}
+
+body{
+   background-color:#212121
+
+}
+
+
+
+.counter {
+    color: var(--color1);
+    background: linear-gradient(to right, var(--color1) 49%, transparent 50%);
+    font-family: 'IBM Plex Sans Hebrew', sans-serif;
+    text-align: center;
+    width: 210px;
+    padding: 110px 10px 35px 30px;
+    margin: auto;
+    position: relative;
+    z-index: 1;
+
+}
+.linear{
+    display: flex;
+    justify-content: space-between; 
+}
+.row{
+    margin: auto;
+}
+
+
+.counter:before,
+.counter:after {
+    content: "";
+    background: transparent;
+    border: 10px solid transparent;
+    border-bottom-color: var(--color2);
+    border-left-color: var(--color2);
+    box-shadow: -6px 6px 8px rgba(171, 171, 171, 0.2);
+    position: absolute;
+    top: 10px;
+    left: 12px;
+    bottom: 10px;
+    right: 0;
+    z-index: -1;
+}
+
+.counter:after {
+    background: #424242;
+    border: none;
+    box-shadow: 6px 6px 8px rgba(173, 173, 173, 0.4);
+    top: 20px;
+    left: 22px;
+    bottom: 20px;
+}
+
+.counter .counter-icon {
+    background: #424242;
+    font-size: 30px;
+    line-height: 55px;
+    width: 55px;
+    height: 55px;
+    border-radius: 50px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5), 0 0 0 8px var(--color1);
+    position: absolute;
+    top: 35px;
+    right: 15px;
+}
+
+.counter h3 {
+    font-size: 18px;
+    font-weight: 600;
+    margin: 0 0 5px 0;
+    text-transform: capitalize;
+}
+
+.counter .counter-value {
+    font-size: 30px;
+    font-weight: 600;
+   
+}
+
+
+
+.plus{
+    font-size: 2em;
+}
+
+@media screen and (max-width:1990px) {
+    .counter {
+        margin-bottom: 40px;
+    }
+}
